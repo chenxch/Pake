@@ -210,10 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const hrefUrl = new URL(anchorElement.href);
       const absoluteUrl = hrefUrl.href;
       let filename = anchorElement.download || getFilenameFromUrl(absoluteUrl);
-      alert(absoluteUrl)
-      alert(anchorElement.target)
-      alert(isExternalLink(absoluteUrl))
-      alert(externalTargetLink())
+
       // Handling external link redirection.
       if (isExternalLink(absoluteUrl) && (['_blank', '_new'].includes(anchorElement.target) || externalTargetLink())) {
         handleExternalLink(e, absoluteUrl);
