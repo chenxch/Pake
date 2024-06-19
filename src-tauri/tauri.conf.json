@@ -22,7 +22,7 @@
       "iconAsTemplate": false
     },
     "allowlist": {
-      "all": true,
+      "all": false,
       "open": false,
       "fs": {
         "all": true,
