@@ -23,6 +23,7 @@
     },
     "allowlist": {
       "all": true,
+      "open": false,
       "fs": {
         "all": true,
         "scope": ["$DOWNLOAD/*"]
