@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   }
 
-  const isExternalLink = link => window.location.host !== link.host;
+  const isExternalLink = link => false;//window.location.host !== link.host;
   // process special download protocol['data:','blob:']
   const isSpecialDownload = url => ['blob', 'data'].some(protocol => url.startsWith(protocol));
 
