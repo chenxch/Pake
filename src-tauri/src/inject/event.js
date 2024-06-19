@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   }
 
-  const isExternalLink = link => false;//window.location.host !== link.host;
+  const isExternalLink = link =>window.location.host !== link.host;
   // process special download protocol['data:','blob:']
   const isSpecialDownload = url => ['blob', 'data'].some(protocol => url.startsWith(protocol));
 
@@ -241,10 +241,11 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       const baseUrl = window.location.origin + window.location.pathname;
       const hrefUrl = new URL(url, baseUrl);
+      window.location.href = hrefUrl.href;
       tauri.shell.open(hrefUrl.href);
     }
     // Call the original window.open function to maintain its normal functionality.
-    return originalWindowOpen.call(window, url, name, specs);
+    // return originalWindowOpen.call(window, url, name, specs);
   };
 
   // Set the default zoom, There are problems with Loop without using try-catch.
