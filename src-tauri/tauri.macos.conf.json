@@ -18,6 +18,13 @@
       "resources": [],
       "shortDescription": "",
       "targets": ["dmg"]
+    },
+    "allowlist": {
+      "all": false,
+      "fs": {
+        "all": true,
+        "scope": ["$DOWNLOAD/*"]
+      }
     }
   }
 }
