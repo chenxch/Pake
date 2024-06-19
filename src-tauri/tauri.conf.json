@@ -22,8 +22,7 @@
       "iconAsTemplate": false
     },
     "allowlist": {
-      "all": false,
-      "open": false,
+      "all": true,
       "fs": {
         "all": true,
         "scope": ["$DOWNLOAD/*"]
